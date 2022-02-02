@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login-grupo10"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text color="dark" class="ion-text-left">
+    <h6>Cadastro de Usuário</h6>
+  </ion-text>
+
+  <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" formControlName="senha"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block" color="primary" [disabled]="!formGroup.valid">Cadastrar</ion-button>
+  </form>
+</ion-content>

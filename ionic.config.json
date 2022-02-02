@@ -1,0 +1,7 @@
+{
+  "name": "projeto_casa_acolhimento_grupo10",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

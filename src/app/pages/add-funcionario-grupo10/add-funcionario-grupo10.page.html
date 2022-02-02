@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="funcionario-grupo10"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Funcionário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="submitForm()">
+
+    <br>
+    <ion-item>
+      <h4 class="h4">Sobre</h4>
+    </ion-item>
+      <div class="divider"></div>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.nome" name="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data Nascimento</ion-label><br>
+      <ion-input class="data" type="date" value="" doneText="Confirmar" cancelText="Cancelar" [(ngModel)]="funcionario.dataNascimento" name="dataNascimento" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.cpf" name="cpf"></ion-input>
+    </ion-item>
+
+    <br>
+    <ion-item>
+      <h4 class="h4">Contato</h4>
+    </ion-item>
+    <div class="divider"></div>
+    <ion-item>
+      <ion-label position="floating">Celular</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.celular" name="celular"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.email" name="email"></ion-input>
+    </ion-item>
+
+    <br>
+    <ion-item>
+      <h4 class="h4">Endereço</h4>
+    </ion-item>
+      <div class="divider"></div>
+    <ion-item>
+      <ion-label position="floating">CEP</ion-label>
+      <ion-input type="text" name="cep" [(ngModel)]="funcionario.cep" (ionBlur)="preencherEndereco()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Rua</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.rua" name="rua"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Bairro</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.bairro" name="bairro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cidade</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.cidade" name="cidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Estado</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.estado" name="estado"></ion-input>
+    </ion-item>
+
+    <br>
+    <ion-item>
+      <h4 class="h4">Trabalho</h4>
+    </ion-item>
+      <div class="divider"></div>
+    <ion-item>
+      <ion-label position="floating">Função</ion-label>
+      <ion-select [(ngModel)]="funcionario.funcao" name="funcao">
+        <ion-select-option value="1">Diretor</ion-select-option>
+        <ion-select-option value="2">Educador</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Salário</ion-label>
+      <ion-input type="number" [(ngModel)]="funcionario.salario" name="salario"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+
+  </form> 
+
+</ion-content>

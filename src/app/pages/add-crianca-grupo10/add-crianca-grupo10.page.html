@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio-grupo10"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Adicionar Crianca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="submitForm()">
+
+    <ion-item>
+       <ion-label position="floating">Nome</ion-label>
+       <ion-input type="text" name="nome" [(ngModel)]="crianca.nome" placeholder="Nome da Criança."></ion-input>
+     </ion-item>
+ 
+     <ion-item>
+       <ion-label position="floating">Data de Nascimento</ion-label>
+       <br>
+       <ion-input type="date" name="dataNascimento" [(ngModel)]="crianca.dataNascimento"></ion-input>
+     </ion-item>
+  
+     <ion-item>
+       <ion-label position="floating">CPF</ion-label>
+       <ion-input doneText="Confirmar" cancelText="Cancelar" name="cpf" [(ngModel)]="crianca.cpf" placeholder="Informe um CPF"></ion-input>
+     </ion-item>
+ 
+     <ion-item>
+       <ion-label position="floating">Descrição do Caso</ion-label>
+       <ion-input doneText="Confirmar" cancelText="Cancelar" name="descricao" [(ngModel)]="crianca.descricao" placeholder="Descreva o caso."></ion-input>
+     </ion-item>
+ 
+     <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+ 
+   </form> 
+
+</ion-content>

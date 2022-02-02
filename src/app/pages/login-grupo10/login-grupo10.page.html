@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding" hide-nav-bar="true">
+
+  <br>
+
+  <ion-img class="logoCentralizada" src="assets/images/casa.jpg">
+  </ion-img>
+
+  <ion-text color="dark" class="ion-text-center">
+    <h1>Casa de Acolhimento Bom Jesus</h1>
+  </ion-text>
+
+  <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" formControlName="senha"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block" color="primary" [disabled]="!formGroup.valid">Entrar</ion-button>
+    <ion-button type="button" expand="block" color="medium" routerLink="/add-usuario-grupo10">Cadastrar</ion-button>
+  </form>
+</ion-content>
+

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio-grupo10"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrar Entrada/Saída</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="submitForm()">
+
+    <ion-item>
+       <ion-label position="floating">Nome da Criança</ion-label>
+       <ion-input type="text" name="nomeCrianca" [(ngModel)]="entradaSaida.nomeCrianca" placeholder="Nome da Criança."></ion-input>
+     </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Hora de Saída</ion-label>
+      <br>
+      <ion-input type="time" name="horarioSaida" [(ngModel)]="entradaSaida.horarioSaida"></ion-input>
+    </ion-item>
+     
+     <ion-item>
+       <ion-label position="floating">Data de Saída</ion-label>
+       <br>
+       <ion-input type="date" name="dataSaida" [(ngModel)]="entradaSaida.dataSaida"></ion-input>
+     </ion-item>
+ 
+     <ion-item>
+       <ion-label position="floating">Descrição do Caso</ion-label>
+       <ion-input doneText="Confirmar" cancelText="Cancelar" name="descricao" [(ngModel)]="entradaSaida.descricao" placeholder="Descreva o caso."></ion-input>
+     </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Hora de Entrada</ion-label>
+      <br>
+      <ion-input type="time" name="horarioEntrada" [(ngModel)]="entradaSaida.horarioEntrada"></ion-input>
+    </ion-item>
+     
+    <ion-item>
+       <ion-label position="floating">Data de Entrada</ion-label>
+       <br>
+       <ion-input type="date" name="dataEntrada" [(ngModel)]="entradaSaida.dataEntrada"></ion-input>
+     </ion-item>
+
+     <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+ 
+   </form> 
+
+</ion-content>
