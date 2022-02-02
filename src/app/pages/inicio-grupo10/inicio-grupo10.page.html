@@ -5,23 +5,56 @@
 </ion-header>
 
 <ion-content>
-  <ion-item><p class="paragrafo">Bem vindo! O que você gostaria de fazer?</p></ion-item>
+  <ion-item><p class="paragrafo">Bem vindo! O que você gostaria de fazer?</p></ion-item>  
   
-  <ion-row class = "ion-align-items-center">
-    <ion-col size="12" class="ion-text-center">
-      <ion-button href="/funcionario-grupo10" color="primary">
-        Gerenciar <br> Funcionários</ion-button>
-    </ion-col>
+    <ion-card href="/funcionario-grupo10" activated="true">
+      <img src="assets/images/funcionarios.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Funcionarios</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Gerencie os dados e situações dos funcionários da instituição a partir dessa tela.
+      </ion-card-content>
+    </ion-card>
 
-    <ion-col size="12" class="ion-text-center">
-      <ion-button href="/crianca-grupo10" color="primary">
-        Gerenciar <br> Crianças</ion-button>
-    </ion-col>
+    <ion-card href="/crianca-grupo10" activated="true">
+      <img src="assets/images/criancas.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Crianças</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Gerencie os dados dos acolhidos da instituição com visualização, cadastro, entre outros.
+      </ion-card-content>
+    </ion-card>
 
-    <ion-col size="12" class="ion-text-center">
-      <ion-button href="/entrada-saida-grupo10" color="primary">
-        Gerenciar <br>Entrada e Saída</ion-button>
-    </ion-col>
-  </ion-row>
+    <ion-card href="/entrada-saida-grupo10" activated="true">
+      <img src="assets/images/entradasaida.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Entrada/Saída</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Registre a movimentação das crianças e adolescentes da instituição a partir do controle de horários de entrada e saída.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card href="/refeicao-grupo10" activated="true">
+      <img src="assets/images/refeicoes.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Refeições</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Registre quais refeições foram servidas em um determinado dia a partir dessa tela.
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card href="/admin-medicacao-grupo10" activated="true">
+      <img src="assets/images/medicacao.jpeg"/>
+      <ion-card-header>
+        <ion-card-title>Ministrar Medicamento</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Faça o registro da aplicação de um medicamento para um determinado acolhido da instituição.
+      </ion-card-content>
+    </ion-card>
 
 </ion-content>

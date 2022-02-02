@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio-grupo10"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Administrar Medicação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="submitForm()">
+
+    <ion-item>
+       <ion-label position="floating">Criança</ion-label>
+       <ion-input type="text" name="crianca" [(ngModel)]="adminMedicacao.crianca" placeholder=""></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label position="floating">Hora da Aplicação</ion-label>
+      <br>
+      <ion-input type="time" name="horarioAplicacao" [(ngModel)]="adminMedicacao.horarioAplicacao"></ion-input>
+    </ion-item>
+ 
+     <ion-item>
+       <ion-label position="floating">Data da Aplicação</ion-label>
+       <br>
+       <ion-input type="date" name="dataAplicacao" [(ngModel)]="adminMedicacao.dataAplicacao"></ion-input>
+     </ion-item>
+  
+     <ion-item>
+       <ion-label position="floating">Descrição</ion-label>
+       <ion-input doneText="Confirmar" cancelText="Cancelar" name="descricao" [(ngModel)]="adminMedicacao.descricao" placeholder=""></ion-input>
+     </ion-item>
+ 
+     <ion-item>
+       <ion-label position="floating">Aplicador</ion-label>
+       <ion-input doneText="Confirmar" cancelText="Cancelar" name="funcionario" [(ngModel)]="adminMedicacao.funcionario" placeholder=""></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label position="floating">Medicamento</ion-label>
+      <ion-input doneText="Confirmar" cancelText="Cancelar" name="medicamento" [(ngModel)]="adminMedicacao.medicamento" placeholder=""></ion-input>
+    </ion-item>
+
+     <br>
+     <ion-button shape="round" type="submit" expand="block" size="large" color="primary">Salvar</ion-button>
+ 
+   </form> 
+
+</ion-content>

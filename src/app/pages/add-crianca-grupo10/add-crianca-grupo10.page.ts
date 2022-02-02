@@ -22,6 +22,7 @@ export class AddCriancaGrupo10Page implements OnInit {
     dataNascimento: null,
     cpf: null,
     descricao: null,
+    naturalidade: null
   }
  
   constructor(private activatedRoute: ActivatedRoute, private navController: NavController, public toastController: ToastController) { }

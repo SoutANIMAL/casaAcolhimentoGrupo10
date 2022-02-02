@@ -58,7 +58,32 @@ const routes: Routes = [
   {
     path: 'add-usuario-grupo10',
     loadChildren: () => import('./pages/add-usuario-grupo10/add-usuario-grupo10.module').then( m => m.AddUsuarioGrupo10PageModule)
+  },
+  {
+    path: 'refeicao-grupo10',
+    loadChildren: () => import('./pages/refeicao-grupo10/refeicao-grupo10.module').then( m => m.RefeicaoGrupo10PageModule)
+  },
+  {
+    path: 'add-refeicao-grupo10',
+    loadChildren: () => import('./pages/add-refeicao-grupo10/add-refeicao-grupo10.module').then( m => m.AddRefeicaoGrupo10PageModule)
+  },
+  {
+    path: 'add-refeicao-grupo10/:id',
+    loadChildren: () => import('./pages/add-refeicao-grupo10/add-refeicao-grupo10.module').then( m => m.AddRefeicaoGrupo10PageModule)
+  },
+  {
+    path: 'admin-medicacao-grupo10',
+    loadChildren: () => import('./pages/admin-medicacao-grupo10/admin-medicacao-grupo10.module').then( m => m.AdminMedicacaoGrupo10PageModule)
+  },
+  {
+    path: 'add-admin-medicacao-grupo10',
+    loadChildren: () => import('./pages/add-admin-medicacao-grupo10/add-admin-medicacao-grupo10.module').then( m => m.AddAdminMedicacaoGrupo10PageModule)
+  },
+  {
+    path: 'add-admin-medicacao-grupo10/:id',
+    loadChildren: () => import('./pages/add-admin-medicacao-grupo10/add-admin-medicacao-grupo10.module').then( m => m.AddAdminMedicacaoGrupo10PageModule)
   }
+
 ];
 
 @NgModule({
